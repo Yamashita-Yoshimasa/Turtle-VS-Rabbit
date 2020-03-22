@@ -1,15 +1,15 @@
 runtime: nodejs10
 
 handlers:
-- url: /dist
-  script: index.html
+- url: /dist/
+  script: dist/index.html
 
 - url: /dist/(.+\.(gif|png|jpg))$
   static_files: \1
   upload: .+\.(gif|png|jpg)$
   application_readable: true
 
-- url: /dist/css
+- url: /dist/css/
   static_dir: css
 
 - url: /dist/.*
