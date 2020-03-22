@@ -10,6 +10,14 @@ handlers:
     static_files: dist/\1
     upload: dist/.*\.(json|ico|js)$
 
+  - url: /(.*\.(css))$
+    static_files: dist/\1
+    upload: dist/.*\.(css)$
+
+  - url: /(.*\.(png|jpg|gif))$
+    static_files: dist/\1
+    upload: dist/.*\.(png|jpg|gif)$
+
   - url: .*
     static_files: dist/index.html
     upload: dist/index.html
