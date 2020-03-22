@@ -3,9 +3,9 @@ runtime: nodejs10
 service: default
 
 handlers:
-  - url: /dist/images/\.(png|jpg|gif)$
-    static_dir: dist/images
-    upload: dist/images/\.(png|jpg|gif)$
+  - url: /(.*\.(png|jpg|gif))$
+    static_files: dist/\1
+    upload: dist/.*\.(png|jpg|gif)$
 
   - url: /(.*\.(json|ico|js))$
     static_files: dist/\1
