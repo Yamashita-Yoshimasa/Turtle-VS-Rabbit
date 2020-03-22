@@ -6,6 +6,10 @@ handlers:
   - url: /(.*\.(png|jpg|gif))$
     static_files: dist/\1
     upload: dist/.*\.(png|jpg|gif)$
+  
+  - url: /(.*\.(css))$
+    static_files: dist/\1
+    upload: dist/.*\.(css)$
 
   - url: /(.*\.(json|ico|js))$
     static_files: dist/\1
