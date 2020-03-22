@@ -1,5 +1,4 @@
 runtime: nodejs10
-default_expiration: "1s"
 handlers:
   - url: /static/js/(.*)
     static_files: dist/static/js/\1
