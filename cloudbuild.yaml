@@ -5,5 +5,8 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'build']
 
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['audit', 'fix']
+
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', 'app.yaml']
