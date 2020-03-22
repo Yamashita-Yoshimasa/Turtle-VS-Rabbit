@@ -6,6 +6,6 @@ handlers:
   secure: always
 - url: /
   static_dir: dist 
-- url: .*
+- url: dist/.*
   static_files: dist/index.html
   upload: dist/index.html
