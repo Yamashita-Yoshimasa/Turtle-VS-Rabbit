@@ -11,7 +11,7 @@ handlers:
     upload: dist/.*\.(json|ico|js|css)$
 
   - url: /dist/images
-    static_files: dist/\1
+    static_files: dist/images/*.png
     upload: dist/images/*.png
 
   - url: /.*
