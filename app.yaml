@@ -6,8 +6,8 @@ handlers:
   - url: /static
     static_dir: dist/static
 
-- url: /dist/css
-  static_dir: dist/css
+- url: /css
+  static_dir: css
 
   - url: /(.*\.(json|ico|js))$
     static_files: dist/\1
