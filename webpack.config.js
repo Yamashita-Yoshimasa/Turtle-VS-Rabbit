@@ -31,4 +31,8 @@ module.exports = {
       maxEntrypointSize: 500000,
       maxAssetSize: 500000,
     },
+    devServer: {
+      historyApiFallback: true,
+      inline: true
+    },
   };
