@@ -1,3 +1,4 @@
+runtime: nodejs10
 handlers:
   - url: /static/js/(.*)
     static_files: dist/static/js/\1
