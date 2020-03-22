@@ -14,8 +14,8 @@ handlers:
     static_dir: dist/css
 
   - url: /(.*\.(gif|png|jpg))$
-    static_files: dist/static/\1
-    upload: dist/static/.*\.(gif|png|jpg)$
+    static_files: static/\1
+    upload: static/.*\.(gif|png|jpg)$
 
   - url: .*
     static_files: dist/index.html
