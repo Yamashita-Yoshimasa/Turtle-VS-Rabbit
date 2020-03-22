@@ -2,19 +2,34 @@ env: standard
 runtime: nodejs10
 service: default
 
+
 handlers:
-  - url: /(.*\.(png|jpg|gif))$
-    static_files: dist/\1
-    upload: dist/.*\.(png|jpg|gif)$
+- url: /
+  static_files: dist/index.html
+  upload: dist/index.html
+
+- url: /(.*)
+  static_files: dist/\1
+  upload: dist/(.*)
+
+- url: .*
+  static_files: dist/index.html
+  upload: dist/index.html
+
+
+# handlers:
+#   - url: /(.*\.(png|jpg|gif))$
+#     static_files: dist/\1
+#     upload: dist/.*\.(png|jpg|gif)$
   
-  - url: /dist/css/(.*)
-    static_files: dist/css/\1
-    upload: dist/css/(.*)
+#   - url: /dist/css/(.*)
+#     static_files: dist/css/\1
+#     upload: dist/css/(.*)
 
-  - url: /(.*\.(json|ico|js))$
-    static_files: dist/\1
-    upload: dist/.*\.(json|ico|js)$
+#   - url: /(.*\.(json|ico|js))$
+#     static_files: dist/\1
+#     upload: dist/.*\.(json|ico|js)$
 
-  - url: .*
-    static_files: dist/index.html
-    upload: dist/index.html
+#   - url: .*
+#     static_files: dist/index.html
+#     upload: dist/index.html
