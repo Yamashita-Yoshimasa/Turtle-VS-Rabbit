@@ -3,16 +3,16 @@ runtime: nodejs10
 service: default
 
 handlers:
-  - url: .*
-    static_files: dist/index.html
-    upload: dist/index.html
-
-  - url: /
+   - url: /
     static_dir: dist 
 
+  - url: /.*
+    static_files: /index.html
+    upload: /index.html
+
   - url: /(.*\.(json|ico|js))$
-    static_files: dist/\1
-    upload: dist/.*\.(json|ico|js)$
+    static_files: /\1
+    upload: /.*\.(json|ico|js)$
 
   # - url: .*
   #   static_files: dist/index.html
