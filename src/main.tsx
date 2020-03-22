@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import GameStart from './screens/gamestart';
-import Field from './screens/field';
+import GameStart from './screens/Gamestart';
+import Field from './screens/Field';
 import TrutleWin from "./screens/Trutle_win";
 import RabbitWin from "./screens/Rabbit_win";
 
