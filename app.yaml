@@ -1,23 +1,20 @@
-env: standard
 runtime: nodejs10
-service: default
+
+instance_class: F1
+
+automatic_scaling:
+  max_instances: 1
+  min_instances: 1
+
+default_expiration: '30d'
 
 handlers:
-  - url: /static/js/(.*)
-    static_files: dist/static/js/\1
-    upload: dist/static/js/(.*)
-  - url: /static/css/(.*)
-    static_files: dist/static/css/\1
-    upload: dist/static/css/(.*)
-  - url: /static/media/(.*)
-    static_files: dist/static/media/\1
-    upload: dist/static/images/(.*)
-  - url: /(.*\.(json|ico))$
+  - url: dist
+    static_dir: dist
+  - url: /(.*\.(json|ico|js))$
     static_files: dist/\1
-    upload: dist/.*\.(json|ico)$
-  - url: /
+    upload: dist/.*\.(json|ico|js)$
+  - url: .*
     static_files: dist/index.html
     upload: dist/index.html
-  - url: /.*
-    static_files: dist/index.html
-    upload: dist/index.html
+    expiration: '0s'
