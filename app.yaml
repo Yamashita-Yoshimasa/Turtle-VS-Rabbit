@@ -1,14 +1,14 @@
 runtime: nodejs10
 handlers:
-  - url: /static/js/(.*)
-    static_files: dist/static/js/\1
-    upload: dist/static/js/(.*)
-  - url: /static/css/(.*)
-    static_files: dist/static/css/\1
-    upload: dist/static/css/(.*)
-  - url: /static/media/(.*)
-    static_files: dist/static/media/\1
-    upload: dist/static/media/(.*)
+  - url: /js/(.*)
+    static_files: dist/js/\1
+    upload: dist/js/(.*)
+  - url: /css/(.*)
+    static_files: dist/css/\1
+    upload: dist/css/(.*)
+  - url: /images/(.*)
+    static_files: dist/images/\1
+    upload: dist/images/(.*)
   - url: /(.*\.(json|ico))$
     static_files: dist/\1
     upload: dist/.*\.(json|ico)$
