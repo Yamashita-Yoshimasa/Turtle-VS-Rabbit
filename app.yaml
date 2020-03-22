@@ -3,10 +3,7 @@ runtime: nodejs10
 service: default
 
 handlers:
-  - url: /dist
-    static_dir: dist/css
-
-  - url: /dist
+  - url: /
     static_dir: dist/images
 
   - url: /(.*\.(json|ico|js))$
