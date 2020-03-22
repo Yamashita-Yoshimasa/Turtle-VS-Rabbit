@@ -3,7 +3,7 @@ runtime: nodejs10
 service: default
 
 handlers:
-  - url: /
+  - url: /dist/images/\.(png|jpg|gif)$
     static_dir: dist/images
     upload: dist/images/\.(png|jpg|gif)$
 
