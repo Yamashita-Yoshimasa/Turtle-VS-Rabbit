@@ -5,6 +5,7 @@ service: default
 handlers:
   - url: /
     static_dir: dist/images
+     upload: dist/.*\.(png|jpg|gif)$
 
   - url: /(.*\.(json|ico|js))$
     static_files: dist/\1
