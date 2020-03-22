@@ -20,6 +20,17 @@ module.exports = {
           test: /\.tsx?$/,
           // TypeScript をコンパイルする
           use: "ts-loader"
+        },
+        {
+          test: /\.(png|jpg|gif)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                  name: '[path][name].[ext]'
+              }  
+            }
+          ]
         }
       ]
     },
