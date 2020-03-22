@@ -1,20 +1,21 @@
-env: standard
 runtime: nodejs10
-service: default
-
 
 handlers:
-- url: /
+- url: /dist
+  script: index.html
+
+- url: /dist/(.+\.(gif|png|jpg))$
+  static_files: \1
+  upload: .+\.(gif|png|jpg)$
+  application_readable: true
+
+- url: /dist/css
+  static_dir: css
+
+- url: /dist/.*
   static_files: dist/index.html
   upload: dist/index.html
-
-- url: /(.*)
-  static_files: dist/\1
-  upload: dist/(.*)
-
-- url: .*
-  static_files: dist/index.html
-  upload: dist/index.html
+  expiration: '0s'
 
 
 # handlers:
