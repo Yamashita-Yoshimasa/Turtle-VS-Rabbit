@@ -65,10 +65,13 @@ class Field extends React.Component<{},FieldState> {
     render () {
         const turtle = "-turtle"
         const rabbit = "-rabbit"
-        let TurtleHP:{} = {
+        interface CharacterHP {
+            width:string;
+        }
+        let TurtleHP:CharacterHP = {
             width:`${this.state.TurtleHP}rem`,
         }
-        let  RabbitHP:{} = {
+        let  RabbitHP:CharacterHP = {
             width:`${this.state.RabbitHP}rem`,
         } 
         let ShowDamage = this.state.ShowFlag ? <Comment Damage = {this.state.Damage} name = {this.state.name} /> : '';
