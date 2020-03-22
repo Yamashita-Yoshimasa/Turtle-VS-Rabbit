@@ -9,4 +9,3 @@ handlers:
 - url: .*
   static_files: dist/index.html
   upload: dist/index.html
-  expiration: '0s'
