@@ -32,7 +32,7 @@ class Field extends React.Component<{},FieldState> {
             const Damage:number[] = [10,15,20,25];
             let TurtleAttack = Damage[Math.floor(Math.random()* Damage.length)];
             this.setState({Damage: TurtleAttack});
-            this.setState({name: 'カメ・ウェザー'})
+            this.setState({name: 'カメイ・ウェザー'})
             let RestHP = this.state.RabbitHP - TurtleAttack / 20; 
             if (RestHP > 0){
                 this.setState({RabbitHP: RestHP}); 
@@ -51,7 +51,7 @@ class Field extends React.Component<{},FieldState> {
         const Damage:number[] = [15,15,15,15,15,20,20,20,20,20,100000000];
         let RabbitAttack = Damage[Math.floor(Math.random()* Damage.length)];
         this.setState({Damage: RabbitAttack});
-        this.setState({name: 'ウサギ・パッキャオ'})
+        this.setState({name: 'バニー・パッキャオ'})
         let RestHP = this.state.TurtleHP - RabbitAttack / 20; 
         if (RestHP > 0){
             this.setState({TurtleHP: RestHP}); 

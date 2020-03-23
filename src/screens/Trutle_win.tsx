@@ -6,7 +6,7 @@ class TrutleWin extends React.Component {
         return(
             <div className="l-winner">
                 <div className="p-winner">
-                    <p className="p-winner__text -view">カメ・ウェザーの勝ち！！</p>
+                    <p className="p-winner__text -view">カメイ・ウェザーの勝ち！！</p>
                 </div>
             </div>
         );
