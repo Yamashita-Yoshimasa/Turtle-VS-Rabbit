@@ -25,7 +25,7 @@ class Field extends React.Component<{},FieldState> {
         this.RabbitAttack = this.RabbitAttack.bind(this)
     }
 
-    TurtleAttack ():any {
+    TurtleAttack ():void {
         if(this.state.ClickFlag) {
             this.setState({ClickFlag: false});
             this.setState({ShowFlag:true});
@@ -38,7 +38,7 @@ class Field extends React.Component<{},FieldState> {
                 this.setState({RabbitHP: RestHP}); 
             } else {
                 this.setState({RabbitHP: 0});
-                return location.href ="/Trutle_win"
+                location.href ="/Trutle_win"
 
             }
             setTimeout(this.RabbitAttack ,800);
@@ -47,7 +47,7 @@ class Field extends React.Component<{},FieldState> {
         }
     }
 
-    RabbitAttack ():any{
+    RabbitAttack ():void{
         const Damage:number[] = [15,15,15,15,15,20,20,20,20,20,100000000];
         let RabbitAttack = Damage[Math.floor(Math.random()* Damage.length)];
         this.setState({Damage: RabbitAttack});
@@ -57,7 +57,7 @@ class Field extends React.Component<{},FieldState> {
             this.setState({TurtleHP: RestHP}); 
         } else {
             this.setState({TurtleHP: 0});
-            setTimeout(()=>{return location.href ="/Rabbit_win"},500);
+            setTimeout(()=>{location.href ="/Rabbit_win"},500);
         }
         this.setState({ClickFlag: true});
     }
