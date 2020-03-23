@@ -1,8 +1,7 @@
 import * as React from "react"
 
 interface HPProps {
-    Character: string;
-    HP: {},
+    CharacterHP: {},
 }
 
 class HP extends React.Component<HPProps,{}> {
@@ -11,7 +10,7 @@ class HP extends React.Component<HPProps,{}> {
             <div className="l-hp">
                 <p>HP:</p>
                 <div className="p-hp__box">
-                    <div className={`p-hp__bar -view ${this.props.Character}`} style = {this.props.HP}></div>
+                    <div className="p-hp__bar -view"style = {this.props.CharacterHP}></div>
                 </div>
             </div>
         );

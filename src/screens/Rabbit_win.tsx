@@ -6,7 +6,7 @@ class RabbitWin extends React.Component {
         return(
             <div className="l-winner">
                 <div className="p-winner">
-                    <p className="p-winner__text -view">ウサギ・パッキャオ<br/>の勝ち！！</p>
+                    <p className="p-winner__text -view">バニー・パッキャオ<br/>の勝ち！！</p>
                 </div>
             </div>
         );
