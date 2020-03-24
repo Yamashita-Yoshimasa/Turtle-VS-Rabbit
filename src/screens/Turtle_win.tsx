@@ -1,7 +1,7 @@
 import * as React from "react";
 
 
-class TrutleWin extends React.Component {
+class TurtleWin extends React.Component {
     render() {
         return(
             <div className="l-winner">
@@ -13,4 +13,4 @@ class TrutleWin extends React.Component {
     }
 }
 
-export default TrutleWin;
+export default TurtleWin;

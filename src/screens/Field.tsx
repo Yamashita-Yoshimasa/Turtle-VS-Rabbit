@@ -37,7 +37,7 @@ class Field extends React.Component<{},FieldState> {
                 this.setState({RabbitHP: RestHP}); 
             } else {
                 this.setState({RabbitHP: 0});
-                location.href ="/Trutle_win"
+                location.href ="/Turtle_win"
 
             }
             setTimeout(this.RabbitAttack ,800);
