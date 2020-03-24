@@ -28,7 +28,6 @@ class Field extends React.Component<{},FieldState> {
     TurtleAttack ():void {
         if(this.state.ClickFlag) {
             this.setState({ClickFlag: false});
-            this.setState({ShowFlag:true});
             const Damage:number[] = [10,15,20,25];
             let TurtleAttack = Damage[Math.floor(Math.random()* Damage.length)];
             this.setState({Damage: TurtleAttack});
@@ -80,7 +79,7 @@ class Field extends React.Component<{},FieldState> {
                         <div className="p-field__character-box -turtle">
                             <img src={`${window.location.origin}/images/turtle.png`} alt="キャラクターの画像" className="p-field__character -turtle"/>
                             <HP CharacterHP = {TurtleHP} />
-                            <button className="p-field__button -view" onClick = { () => this.TurtleAttack()}>たたかう</button>
+                            <button className="p-field__button -view" onClick = { () => {this.TurtleAttack(); this.setState({ShowFlag:true});}}>たたかう</button>
                         </div>
                         <div className="p-field__character-box -rabbit">
                             <HP CharacterHP = {RabbitHP} />
